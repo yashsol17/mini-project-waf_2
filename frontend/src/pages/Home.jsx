@@ -8,12 +8,12 @@ const Home = ({ addToCart }) => {
 
   // ✅ Fetch from backend
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
-      .then(res => {
-        setProducts(res.data);
-      })
-      .catch(err => console.log(err));
-  }, []);
+      axios.get("https://mini-project-waf-2.onrender.com/api/products")
+        .then(res => {
+          setProducts(res.data);
+        })
+        .catch(err => console.log(err));
+    }, []);
 
   return (
     <div style={{ padding: "20px" }}>
