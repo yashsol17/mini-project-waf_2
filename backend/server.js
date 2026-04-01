@@ -8,7 +8,10 @@ const mongoose = require("mongoose");
 const app = express(); // ✅ FIRST create app
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 
 // routes
